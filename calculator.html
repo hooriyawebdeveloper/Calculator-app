@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    
+    <div class="calculator">
+
+        <h1>Calculator ✨</h1>
+
+        <p class="subtitle">
+            Calculate anything, very smoothly!
+        </p>
+
+        <!-- Calculator Display -->
+
+        <input
+            id="display"
+            type="text"
+            readonly
+        >
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+
+            <button>0</button>
+            <button>C</button>
+            <button>=</button>
+            <button>+</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Payment Popup -->
+
+    <div id="paymentPopup" class="popup">
+
+        <div class="payment-box">
+
+            <button id="closeBtn" class="close">
+                ×
+            </button>
+
+            <div class="lock">
+                🔒
+            </div>
+
+            <h2>Result Locked!</h2>
+
+            <p>
+                Your calculation is ready.
+            </p>
+
+            <p class="small-text">
+                Pay a small amount to unlock your result.
+            </p>
+
+            <div class="price">
+                $1B
+            </div>
+
+            <button id="payBtn" class="pay-btn">
+                💳 Pay & Unlock Result
+            </button>
+
+            <p id="paymentMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="calculator.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffe4ec,
+        #e9d5ff
+    );
+}
+
+
+/* Calculator */
+
+.calculator {
+    width: 320px;
+
+    padding: 25px;
+
+    background: #ab779c;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+}
+
+
+h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 24px;
+}
+
+
+.subtitle {
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Display */
+
+#display {
+    width: 100%;
+
+    height: 55px;
+
+    margin-bottom: 15px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 24px;
+
+    text-align: right;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+button {
+    height: 55px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+
+    background: #f1f1f1;
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* Payment Popup */
+
+.popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(5px);
+
+    padding: 20px;
+}
+
+
+/* Payment Box */
+
+.payment-box {
+    width: 350px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    animation: popup 0.3s ease;
+}
+
+
+.lock {
+    width: 65px;
+    height: 65px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #f3e8ff;
+
+    font-size: 30px;
+}
+
+
+.payment-box h2 {
+    margin-bottom: 8px;
+
+    color: #222;
+}
+
+
+.payment-box p {
+    color: #777;
+}
+
+
+.small-text {
+    font-size: 13px;
+}
+
+
+.price {
+    margin: 20px;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: #7c3aed;
+}
+
+
+/* Pay Button */
+
+.pay-btn {
+    width: 100%;
+
+    height: 50px;
+
+    background: #7c3aed;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+.pay-btn:hover {
+    background: #6d28d9;
+}
+
+
+/* Close Button */
+
+.close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    background: #f3f3f3;
+
+    font-size: 25px;
+
+    color: #555;
+}
+
+
+#paymentMessage {
+    font-weight: bold;
+
+    margin-top: 15px;
+}
+
+
+/* Animation */
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .calculator {
+        width: 90%;
+
+        max-width: 320px;
+
+        padding: 20px;
+    }
+
+
+    .payment-box {
+        width: 90%;
+
+        max-width: 350px;
+
+        padding: 30px 20px;
+    }
+
+
+    button {
+        height: 52px;
+
+        font-size: 18px;
+    }
+
+}
+body {
+    background-image: url("images/img.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
